@@ -2,3 +2,4 @@ bin/
 *.class
 .vscode/
 manifest.mf
+/build/

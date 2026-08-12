@@ -16,12 +16,12 @@ import co.edu.udistrital.view.SalidaArchivo;
 public class FabricaArchivo extends FabricaEntradaSalida {
 
     @Override
-    Entrada crearEntrada() {
+    public Entrada crearEntrada() {
         return new EntradaArchivo();
     }
 
     @Override
-    Salida crearSalida() {
+    public Salida crearSalida() {
         return new SalidaArchivo();
     }
     

@@ -9,6 +9,6 @@ import co.edu.udistrital.view.*;
  * @author Estudiantes
  */
 public abstract class FabricaEntradaSalida {
-    abstract Entrada crearEntrada();
-    abstract Salida crearSalida();
+    abstract public Entrada crearEntrada();
+    abstract public Salida crearSalida();
 }

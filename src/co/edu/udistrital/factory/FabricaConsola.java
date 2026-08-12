@@ -16,12 +16,12 @@ import co.edu.udistrital.view.SalidaConsola;
 public class FabricaConsola extends FabricaEntradaSalida {
 
     @Override
-    Entrada crearEntrada() {
+    public Entrada crearEntrada() {
         return new EntradaTeclado();
     }
 
     @Override
-    Salida crearSalida() {
+    public Salida crearSalida() {
         return new SalidaConsola();
     }
     
