@@ -20,7 +20,7 @@ public class Cliente {
     public void ejecutar(FabricaEntradaSalida fabrica,Operacion operacion) {
         Entrada entrada = fabrica.crearEntrada();
         Salida salida = fabrica.crearSalida();
-
+        salida.mostrar("ingrese dos numeros");
         double a = parseDouble(entrada.capturar());
         double b = parseDouble(entrada.capturar());
 

@@ -13,7 +13,7 @@ public class EntradaGrafica implements Entrada {
 
     @Override
     public String capturar() {
-        return JOptionPane.showInputDialog("Ingrese el valor");
+        return JOptionPane.showInputDialog("");
     }
     
 }
