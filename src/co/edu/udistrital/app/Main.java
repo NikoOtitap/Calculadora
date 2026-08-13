@@ -1,9 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package co.edu.udistrital.controller;
+package co.edu.udistrital.app;
 
+
+import co.edu.udistrital.controller.Cliente;
+import co.edu.udistrital.factory.FabricaArchivo;
+import co.edu.udistrital.factory.FabricaConsola;
 import co.edu.udistrital.factory.FabricaEntradaSalida;
 import co.edu.udistrital.model.Operacion;
 import co.edu.udistrital.model.Suma;
@@ -11,13 +11,11 @@ import co.edu.udistrital.view.Entrada;
 import co.edu.udistrital.view.Salida;
 import static java.lang.Double.parseDouble;
 
-/**
- *
- * @author oliva
- */
-public class Cliente {
-    
-    public void ejecutar(FabricaEntradaSalida fabrica,Operacion operacion) {
+public class Main {
+    public static void main(String[] args) throws Exception {
+        Cliente cliente = new Cliente();
+        FabricaEntradaSalida fabrica = new FabricaArchivo();
+        Operacion operacion = new Suma();
         Entrada entrada = fabrica.crearEntrada();
         Salida salida = fabrica.crearSalida();
 
