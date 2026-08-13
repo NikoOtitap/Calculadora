@@ -11,9 +11,7 @@ import co.edu.udistrital.model.Suma;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Cliente cliente = new Cliente();
-        FabricaEntradaSalida fabrica = new FabricaArchivo();
-        Operacion operacion = new Suma();
-        cliente.ejecutar(fabrica,operacion);
+        Cliente cliente = new Cliente(new FabricaGrafica(),new Suma());
+        cliente.ejecutar();
     }
 }

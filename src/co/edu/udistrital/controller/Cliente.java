@@ -17,7 +17,15 @@ import static java.lang.Double.parseDouble;
  */
 public class Cliente {
     
-    public void ejecutar(FabricaEntradaSalida fabrica,Operacion operacion) {
+    private FabricaEntradaSalida fabrica;
+    private Operacion operacion;
+    
+    public Cliente(FabricaEntradaSalida fabrica,Operacion operacion){
+        this.fabrica = fabrica;
+        this.operacion = operacion;
+    }
+    
+    public void ejecutar() {
         Entrada entrada = fabrica.crearEntrada();
         Salida salida = fabrica.crearSalida();
         salida.mostrar("ingrese dos numeros");
