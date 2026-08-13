@@ -3,3 +3,4 @@ bin/
 .vscode/
 manifest.mf
 /build/
+salida.txt
