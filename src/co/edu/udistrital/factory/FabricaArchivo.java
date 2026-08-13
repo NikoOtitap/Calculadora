@@ -17,12 +17,12 @@ public class FabricaArchivo extends FabricaEntradaSalida {
 
     @Override
     public Entrada crearEntrada() {
-        return new EntradaArchivo();
+        return new EntradaArchivo("entrada.txt");
     }
 
     @Override
     public Salida crearSalida() {
-        return new SalidaArchivo();
+        return new SalidaArchivo("salida.txt");
     }
     
 }
