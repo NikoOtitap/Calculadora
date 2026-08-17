@@ -43,4 +43,3 @@ public class Controlador {
         this.vista.mostrar_resultado(resultado);
     }
 }
-

@@ -1,7 +1,7 @@
 package co.edu.udistrital.app;
 
 
-import co.edu.udistrital.controller.Cliente;
+import co.edu.udistrital.cliente.Cliente;
 import co.edu.udistrital.factory.FabricaArchivo;
 import co.edu.udistrital.factory.FabricaConsola;
 import co.edu.udistrital.factory.FabricaEntradaSalida;
@@ -13,7 +13,6 @@ import static java.lang.Double.parseDouble;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        Cliente cliente = new Cliente();
         FabricaEntradaSalida fabrica = new FabricaArchivo();
         Operacion operacion = new Suma();
         Entrada entrada = fabrica.crearEntrada();
