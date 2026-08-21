@@ -6,34 +6,42 @@ package co.edu.udistrital.cliente;
 
 import co.edu.udistrital.factory.FabricaEntradaSalida;
 import co.edu.udistrital.model.Operacion;
-import co.edu.udistrital.model.Suma;
 import co.edu.udistrital.view.Entrada;
 import co.edu.udistrital.view.Salida;
 import static java.lang.Double.parseDouble;
+import static java.lang.Integer.parseInt;
 
 /**
  *
  * @author oliva
  */
-public class Cliente {
-    
+public class Cliente{
     private FabricaEntradaSalida fabrica;
     private Operacion operacion;
-    
+    private double a;
+    private double b;
+    private Entrada entrada;
+    private Salida salida;
     public Cliente(FabricaEntradaSalida fabrica,Operacion operacion){
         this.fabrica = fabrica;
         this.operacion = operacion;
+        this.entrada = fabrica.crearEntrada();
+        this.salida = fabrica.crearSalida();
     }
-    
-    public void ejecutar() {
-        Entrada entrada = fabrica.crearEntrada();
-        Salida salida = fabrica.crearSalida();
-        salida.mostrar("ingrese dos numeros");
+    public void capturar(){
+        salida.mostrar("ingrese un numero");
         double a = parseDouble(entrada.capturar());
-        double b = parseDouble(entrada.capturar());
-
-        double resultado = operacion.operar(a, b);
-
-        salida.mostrar(Double.toString(resultado));
+        salida.mostrar("ingrese un numero entero");
+        double b = parseInt(entrada.capturar());
+        this.a=a;
+        this.b=b;
+    }
+    public void mostrar(double resultado){
+        salida.mostrar(Double.toString(resultado));   
+    }
+    public void ejecutar(){
+        this.capturar();
+        double resultado=operacion.operar(a, b);
+        this.mostrar(resultado);
     }
 }
